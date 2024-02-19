@@ -9,7 +9,7 @@ import { TSurveyQuestionType } from "@formbricks/types/surveys";
 import type {
   TSurveyCalQuestion,
   TSurveyDateQuestion,
-  TSurveyFileUploadQuestion,
+  // TSurveyFileUploadQuestion,
   TSurveyPictureSelectionQuestion,
   TSurveyQuestionSummary,
 } from "@formbricks/types/surveys";
@@ -28,7 +28,7 @@ import EmptySpaceFiller from "@formbricks/ui/EmptySpaceFiller";
 
 import CTASummary from "./CTASummary";
 import DateQuestionSummary from "./DateQuestionSummary";
-import FileUploadSummary from "./FileUploadSummary";
+// import FileUploadSummary from "./FileUploadSummary";
 import MultipleChoiceSummary from "./MultipleChoiceSummary";
 import NPSSummary from "./NPSSummary";
 import OpenTextSummary from "./OpenTextSummary";
@@ -151,15 +151,15 @@ export default function SummaryList({ environment, survey, responses, responsesP
                 />
               );
             }
-            if (questionSummary.question.type === TSurveyQuestionType.FileUpload) {
-              return (
-                <FileUploadSummary
-                  key={questionSummary.question.id}
-                  questionSummary={questionSummary as TSurveyQuestionSummary<TSurveyFileUploadQuestion>}
-                  environmentId={environment.id}
-                />
-              );
-            }
+            // if (questionSummary.question.type === TSurveyQuestionType.FileUpload) {
+            //   return (
+            //     <FileUploadSummary
+            //       key={questionSummary.question.id}
+            //       questionSummary={questionSummary as TSurveyQuestionSummary<TSurveyFileUploadQuestion>}
+            //       environmentId={environment.id}
+            //     />
+            //   );
+            // }
 
             if (questionSummary.question.type === TSurveyQuestionType.Cal) {
               return (
