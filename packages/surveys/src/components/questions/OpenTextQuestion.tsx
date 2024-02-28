@@ -84,7 +84,7 @@ export default function OpenTextQuestion({
             autoFocus={autoFocus}
             className="border-border bg-survey-bg focus:border-border-highlight block w-full rounded-md border p-2 shadow-sm focus:outline-none focus:ring-0 sm:text-sm"
             pattern={
-              question.id == "emd6b7pqhgj0nu15ozvz3rwk" ? "(?:[\u0600-\u06FF]+\s+){3,}(?:[\u0600-\u06FF]+\s*)[\u0600-\u06FF]+" :   //Arabic Name 4 words
+              question.id == "emd6b7pqhgj0nu15ozvz3rwk" ? "(?:[\\u0600-\\u06FF]+\\s+){3,}(?:[\\u0600-\\u06FF]+\\s*)[\\u0600-\\u06FF]+" :   //Arabic Name 4 words
               // question.id == "" ? "" :
               // question.id == "" ? "" :
               question.inputType === "phone" ? "[0-9+ ]+" : 
